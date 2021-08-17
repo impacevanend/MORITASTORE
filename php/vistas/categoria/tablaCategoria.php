@@ -2,6 +2,7 @@
 
 	<?php 
 			require_once "../../clases/Conexion.php";
+			require_once "../dependenciasCp.php";
 			$c= new conectar();
 			$conexion=$c->conexion();
 
