@@ -1,0 +1,66 @@
+    <!-- todo notas:
+-------------------------------------------
+    optimización de Bootstrap -> npm i -g purgecss
+
+    usage: purgecss --css <css> --content <content> [options] -> en package.json
+
+    comando por terminal: npm run build
+
+
+    ----------------------------------------
+
+    -----------------------------
+    Instalación de package.json
+    npm install
+
+  ------------------------------
+
+    Utilities:
+    Utilities > color 
+    Utilities > flex
+    Utilities > sizing
+    Utilities > Borders
+    Utilities > Spacing
+    Utilities > Text
+    Utilities > shadows-sm
+
+    Content:
+    Content > Typography
+
+    Customiz:
+    Sass
+    
+    _variables.scss:
+    linea 419 font-family-sans-serif: 
+
+    $container-max-widths:{
+        sm: 540px
+        md: 720px
+        lg: 960px
+        xl: 960px
+        xxl: 960px
+    }
+
+    tamaño de fuente:
+    Google fonts -> 100, 300, 600, 900
+
+Crear un nuevo repositorio en la linea de comandos:
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/impacevanend/morita-store.git
+git push -u origin main
+    
+
+Subir un repositorio existente desde la linea de comandos:
+
+git remote add origin https://github.com/impacevanend/morita-store.git
+git branch -M main
+git push -u origin main
+
+
+información paleta de colores:
+https://uxdesign.cc/10-principles-for-color-usage-in-ui-design-65174b213004
+-->

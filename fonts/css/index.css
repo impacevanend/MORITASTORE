@@ -1,0 +1,137 @@
+/*todo Estructura de Layout*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #fff;
+    counter-reset: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 1300px;
+    /* margin: 20px auto; */
+    display: grid;
+    /* grid-gap:20px; */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: "header header header "
+                        "contenido contenido sidebar"
+                        "widget-1 widget-2 sidebar"
+                        "footer footer footer";
+}
+
+.contenedor> div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer
+{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background: #55a8fd;
+    color: #fff;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-area: header;
+}
+
+.contenedor .contenido{
+    /* grid-column:span 2; */
+    grid-area:contenido;
+    /* height:700px; */
+    background: #D9D9D9;
+    height: 100vh;
+}
+
+.contenedor .sidebar{
+    /* grid-column: 3/4; */
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* *Coloca esta instrucción despúes*/
+    min-height: 100px;
+    /* grid-row: span 2; */
+    grid-area: sidebar;
+    width: 20px;
+    /* justify-self: end; */
+    cursor:pointer;
+   
+    
+}
+
+
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background: #55a8fd;
+    color:#fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+.contenedor .footer{
+    background: #2793F2;
+    color: #fff;
+    /* grid-column: span 3; */
+    grid-area: footer;
+}
+
+/**Creación de menú*/
+.sidebar ul{
+    list-style: none;
+    list-style: none;
+    position: fixed;
+    top:0;
+    /* right: -50%; */
+    /* background:rgba(0,0,0,0.9);  */
+    width:50%;
+    height:100vh;
+    padding-top: 4em;
+    z-index: 100;
+    transition: all .5s;
+    
+}
+
+
+
+.icono{
+    color: red;
+    border: none;
+    font-size: 120px;
+   
+}
+
+
+/**Layout responsivo*/
+@media screen and (max-width:768px) {
+
+    .contenedor{
+        grid-template-areas: "header header header"
+                            "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-2"
+                            "footer footer footer";
+    }
+    
+}

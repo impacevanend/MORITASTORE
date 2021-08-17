@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--* fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600;700;900&display=swap" rel="stylesheet">
+    <title>Cliente</title>
+    <script src = "https://code.jquery.com/jquery-3.4.1.js" > </script> 
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<!--* Sass-Css -->
+<link rel="stylesheet" href="../sass/custom.css">
+<link rel="stylesheet" href="../dashboard.css"> 
+
+
+
+</main>
+
+</head>
+<body>
+
+<main class="container-fluid alto-100 w-100 ">
+
+    <div class="row">
+      <div class="col-12 bg-primary">
+        <img src="../images/android-icon-72x72.png" class="rounded float-start img-fluid m-1" alt="logo">
+      </div>
+            <div class="col-12 col-lg-3 border bg-success">
+                <!--*menu  Columna izquierda-->
+                <nav class="sidebar col-12 h-75">
+                  <div class="text">
+                     Menu
+                  </div>
+                  <ul>
+                     <li class=""><a href="#">Contenido:</a></li>
+                     <li>
+                        <a href="#" class="feat-btn"><i class="fas fa-tags me-2"></i>Catalogo
+                        <span class="fas fa-caret-down first"></span>
+                        </a>
+                        <ul class="feat-show">
+                           <li><a href="catalogo/catalogo.html">Catalogo</a></li>
+                           <li><a href="catalogo/productos.html">Productos</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#" class="serv-btn"><i class="fab fa-cc-visa me-2"></i>Ventas
+                        <span class="fas fa-caret-down second"></span>
+                        </a>
+                        <ul class="serv-show">
+                           <li><a href="ventas/ordenes.html">Ordenes</a></li>
+                           <li><a href="ventas/perfilRecurrente.html">Perfil recurrente</a></li>
+                           <li><a href="ventas/devoluciones.htm">Devoluciones</a></li>
+                        </ul>
+                     </li>
+                     <li class="mb-2">
+                        <a href="#" class="serv-cam"><i class="far fa-user me-2"></i>Clientes
+                        <span class="fas fa-caret-down second"></span>
+                        </a>
+                        <ul class="serv-cam">
+                           <li><a href="./clientes.html">Clientes</a></li>
+                           <li><a href="./clientes.html">Grupo de clientes</a></li>
+                           <li><a href="./aprobacionesClientes.html">Clientes aprobados</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#" class="serv-cam2"><i class="far fa-chart-bar me-2"></i>Informes
+                        <span class="fas fa-caret-down second"></span>
+                        </a>
+                        <ul class="serv-cam2">
+                           <li><a href="reports/reportes.html">Informes</a></li>
+                           <li><a href="#">Reportes</a></li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
+               </nav>
+            </div>
+
+
+            <div class="col-12 col-lg-9 border bg-secondary ">
+                <!--*menu  Columna derecha-->
+                <div class="row">
+                    <div class="col-12 col-lg-12 p-2 border">
+                        <ol class="breadcrumb alert alert-dark">
+                            <li class="breadcrumb-item h5">Clientes</li>
+                            <a class="breadcrumb-item active" href="../dashboard.html"  aria-current="page">Home</a>
+                            <a class="breadcrumb-item active alert-link" href="clientes.html"> Clientes</a>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- *lista de clientes -->
+                    <div class="col-12 col-md-8 p-2 border">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Nombre del cliente</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Grupo de cliente</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Fecha Ingresada</th>
+                                <th scope="col">Acción</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </th>
+                                <td>Mark</td>
+                                <td>Otto@gmail.com</td>
+                                </td>
+                                <td>Por defecto</td>
+                                <td>Activo</td>
+                                <td>domingo, 01 de junio de 2021</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </th>
+                                <td>Jacob</td>
+                                <td>Thornton@gmail.com</td>
+                                </td>
+                                <td>Por defecto</td>
+                                <td>Activo</td>
+                                <td>domingo, 13 de junio de 2021</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </th>
+                                <td >Larry the Bird</td>
+                                <td >LarrytheBird@gmail.com</td>
+                                <td>Por defecto</td>
+                                <td>Activo</td>
+                                <td>domingo, 18 de junio de 2021</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <!-- *filtro -->
+                    <div class="col-12 col-md-4 p-2 border">
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombre del cliente</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre a buscar...">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@electrónico.com">
+                          </div>
+                          <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Grupo de cliente</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Elige...</option>
+                              <option value="1">Por defecto</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Estado</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                              <option selected>Elige...</option>
+                              <option value="1">Activo</option>
+                              <option value="2">Inactivo</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3" style="vertical-align: inherit;">
+                              <div style="vertical-align:inherit" class="pe-4">Fecha</div>
+                              <label for="datetime-local"></label>
+                          <input type="datetime-local" id="datetime-local" class="border-0">
+                          </div>
+                          <button type="button" class="btn btn-outline-primary">Filtrar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- *Migas de pan -->
+                    <div class="col-12 col-lg-12 p-2 border">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="../dashboard.html">Anterior</a></li>
+                              <li class="page-item"><a class="page-link" href="clientes.html">1</a></li>
+                              <li class="page-item"><a class="page-link" href="clientes.html">2</a></li>
+                              <li class="page-item"><a class="page-link" href="clientes.html">3</a></li>
+                              <li class="page-item"><a class="page-link" href="../dashboard.html">próximo</a></li>
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+          <!-- class="bg-primary text-white mt-1 text-center h-1" -->
+          <p class="bg-secondary  mt-1 text-center h-1 d-block p-2 text-success">M&S © 2021 Todos los derechos reservados.
+            Versión 1.1.1</p> 
+      </div>
+    </main>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

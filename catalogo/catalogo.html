@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--* fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600;700;900&display=swap" rel="stylesheet">
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/0b0d251a3c.js" crossorigin="anonymous"></script>
+    
+    <title>catalogo</title>
+    <script src = "https://code.jquery.com/jquery-3.4.1.js" > </script> 
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<!--* Sass-Css -->
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="../dashboard.css"> 
+
+</main>
+
+</head>
+<body>
+    <main class="container-fluid">
+      <!-- encabezado -->
+        <div class="row">
+          <div class="col-12 bg-primary">
+            <img src="../images/android-icon-72x72.png" class="rounded float-start img-fluid m-1" alt="logo">
+          </div>
+            <!--*menu  Columna izquierda-->
+            <div class="col-12 col-lg-3 border bg-success">
+              <nav class="sidebar col-12 h-75">
+                <div class="text">
+                   Menu
+                </div>
+                <ul>
+                   <li class=""><a href="#">Contenido:</a></li>
+                   <li>
+                      <a href="#" class="feat-btn"><i class="fas fa-tags me-2"></i>Catalogo
+                      <span class="fas fa-caret-down first"></span>
+                      </a>
+                      <ul class="feat-show">
+                         <li><a href="./catalogo.html">Catalogo</a></li>
+                         <li><a href="./productos.html">Productos</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#" class="serv-btn"><i class="fab fa-cc-visa me-2"></i>Ventas
+                      <span class="fas fa-caret-down second"></span>
+                      </a>
+                      <ul class="serv-show">
+                         <li><a href="../ventas/ordenes.html">Ordenes</a></li>
+                         <li><a href="../ventas/ordenes.html">Perfil recurrente</a></li>
+                         <li><a href="../ventas/ordenes.html">Devoluciones</a></li>
+                      </ul>
+                   </li>
+                   <li class="mb-2">
+                      <a href="#" class="serv-cam"><i class="far fa-user me-2"></i>Clientes
+                      <span class="fas fa-caret-down second"></span>
+                      </a>
+                      <ul class="serv-cam">
+                         <li><a href="../clients/clientes.html">Clientes</a></li>
+                         <li><a href="../clients/clientes.html">Grupo de clientes</a></li>
+                         <li><a href="../clients/aprobacionesClientes.html">Clientes aprobados</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#" class="serv-cam2"><i class="far fa-chart-bar me-2"></i>Informes
+                      <span class="fas fa-caret-down second"></span>
+                      </a>
+                      <ul class="serv-cam2">
+                         <li><a href="reports/reportes.html">Informes</a></li>
+                         <li><a href="#">Reportes</a></li>
+                      </ul>
+                   </li>
+                   
+                </ul>
+             </nav>
+            </div>
+            <div class="col-12 col-lg-9 border">
+                <!--*menu  Columna derecha-->
+                <div class="row">
+                  <div class="col-12 col-lg-12 p-2 border">
+                    <!-- *Migas de pan -->
+                      <ol class="breadcrumb alert alert-dark">
+                        <li class="breadcrumb-item h5">Catalogo</li>
+                        <a class="breadcrumb-item active" href="categoria.html"  aria-current="page">Home</a>
+                        <a class="breadcrumb-item active alert-link" href="categoria.html">Catalogo</a>
+                      </ol>
+                      
+                        <!-- creasion de los botones  -->
+                      <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                        <button class="btn btn-dark me-md-1" type="button"><i class="fa fa-plus"></i></button>
+                        <button class="btn btn-success me-md-1" type="button"><i class="fa fa-refresh"></i></button>
+                        <button class="btn btn-success me-md-1" type="button"><i class="far fa-trash-alt"></i></button>
+                      </div>
+                  </div>
+                    
+                  </div>
+                    <!-- creacion de la tabla categoria -->
+                    <div class="table 10">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <td class="text-center"></td>
+                                    <td class="text-right text-center text-capitalize">Nombre catalogo</td>
+                                    <td class="text-right text-center">Estado orden
+                                    </td>
+                                    <td class="text-right text-center text-capitalize">Action</td>
+                                </tr>
+                            </thead>
+                                <tbody>
+                                    <tr>
+                                    <td class="text-right text-center"> <input type="checkbox" name="selected[]" value="33" />
+                                    </td>
+                                    <td class="text-left">zapatillas</td>
+                                    <td class="text-right text-center">6</td>
+                                    <td class="text-right text-center"><a href=".."title="Edit" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i></a></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="text-center"> <input type="checkbox" name="selected[]" value="33">
+                                    </td>
+                                    <td class="text-left">Camisas</td>
+                                    <td class="text-right text-center">6</td>
+                                    <td class="text-right text-center"><a href=".." data-toggle="tooltip" title="Edit" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="text-center"> <input type="checkbox" name="selected[]" value="33" />
+                                    </td>
+                                    <td class="text-left">Carteras</td>
+                                    <td class="text-right text-center">6</td>
+                                    <td class="text-right text-center"><a href=".." data-toggle="tooltip" title="Edit" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                    </div>
+                    <div class="row">
+                      <!-- *PAginación -->
+                      <div class="col-12 col-lg-12 p-2 border">
+                          <nav aria-label="Page navigation example">
+                              <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="../dashboard.html">Anterior</a></li>
+                                <li class="page-item"><a class="page-link" href="clientes.html">1</a></li>
+                                <li class="page-item"><a class="page-link" href="clientes.html">2</a></li>
+                                <li class="page-item"><a class="page-link" href="clientes.html">3</a></li>
+                                <li class="page-item"><a class="page-link" href="../dashboard.html">próximo</a></li>
+                              </ul>
+                            </nav>
+                      </div>
+                  </div>
+                </div>
+                <!-- introduccion texto -->
+                
+            </div>
+        </div>
+        <div class="row">
+          <p class="bg-secondary  mt-1 text-center h-1 d-block p-2 text-success">M&S © 2021 Todos los derechos reservados.
+            Versión 1.1.1</p>
+      </div>
+      
+    </main>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

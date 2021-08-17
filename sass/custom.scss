@@ -1,0 +1,36 @@
+
+$font-family-sans-serif: 'Barlow Semi Condensed', sans-serif;
+
+$primary:#D50110; //Rojo intenso
+$success:#09101B; //Azul oscuro
+$dark: #7C0309; //Rojo oscuro
+$secondary:#D6DCE3; //Blanco
+$info: #9D7C68;//Color piel
+
+
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+
+@media (min-width: 920px){
+    .alto-100{
+        height:100vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

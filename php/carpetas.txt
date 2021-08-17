@@ -1,0 +1,17 @@
+1. database: carpeta que contiene los snipets o querys de la bd
+listos para ejecutar
+2. clases: contiene todas las clases de cada modulo, con sus
+respectivos metodos de crud
+3. css: contiene los scripts css que serviran para dar 
+estilos personalizado en caso de ser util.
+4 img: contiene todas las imágenes que necesitmemos agregar a
+nuestras vistas
+5. archivos: contiene todas las imágenes de los productos
+agregados
+6. js: contiene todos los scripts js para cada moudlo que 
+ejecutan las funciones de crud.
+7. librerias: contendrá librerias para la ceación de pdf, jquery, 
+jquery, aletrify, bootstrap y select 2.
+8.procesos: contiene archivos intermedios entre las clases y 
+las vista. Estos mandarán información entre una y otra cosa.
+9. vistas: contendrá todas las vistas de cada uno de los modulos.
