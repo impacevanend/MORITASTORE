@@ -19,8 +19,11 @@ if (isset($_SESSION['usuario'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="css/catalogo.css">
-        <?php require_once "dependencias.php"; ?>
+        <link rel="stylesheet" href="../css/catalogo.css">
+    <link rel="stylesheet" type="text/css" href="pruebaModal/bootstrap/css/bootstrap.css">
+    <script src="pruebaModal/jquery-3.1.1.min.js"></script>
+    <script src="pruebaModal/bootstrap/js/bootstrap.js"></script>
+        <?php require_once "dependenciasCp.php"; ?>
 
     </head>
 
@@ -38,7 +41,14 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col-12 col-lg-3 border bg-success">
                     !--*menu Columna izquierda-->
                     <?php require_once("menu.php") ?>
+                    <?php  require_once "../clases/Conexion.php";
+                    
+                        $c = new conectar();
+                        $conexion = $c->conexion();
+                        $sql="SELECT id_categoria, nombreCategoria FROM categorias"; 
 
+                        $result = mysqli_query($conexion,$sql);
+                    ?>
                 </div>
                 <div class="col-12 col-lg-9 border">
                     <!--*menu  Columna derecha-->
@@ -69,6 +79,9 @@ if (isset($_SESSION['usuario'])) {
                                         <lable>Categoria</lable>
                                         <select class="from-control input-sm form-label" name="categoriaSelect" id="categoriaSelect">
                                             <option value="A">Elegir Categoría</option>
+                                        <?php while($ver = mysqli_fetch_row($result)):?>
+                                            <option value="<?php echo $ver[0] ?>"><?php echo $ver[1] ?></option>
+                                        <?php endwhile; ?>
                                         </select><br>
                                     </div>
                                     <div class="mb-3">
@@ -98,7 +111,7 @@ if (isset($_SESSION['usuario'])) {
                                 </form>
                             </div>
                             <div class="col-sm-8">
-                                <div class="table 10" id="tablaArticulosCarga">
+                                <div class="table 10" id="tablaArticulosLoad">
 
                                 </div>
                             </div>
@@ -135,40 +148,43 @@ if (isset($_SESSION['usuario'])) {
         <script>
             $(document).ready(function() {
 
-                $('#tablaArticulosCarga').load("articulos/tablaArticulos.php");
+                $('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
 
                 $('#btnAgregarArticulo').click(function() {
 
-                    vacios = validarFormVacio('frmArticulos ');
+                    /*vacios = validarFormVacio('frmArticulos ');
 
                     if (vacios > 0) {
                         alertify.alert("¡Debes llenar todos los campos!");
                         return false;
-                    }
+                    }*/
 
-                    datos = $('#frmArticulos').serialize();
+                    var formData = new FormData(document.getElementById("frmArticulos"));
+
                     $.ajax({
-                        type: "POST",
-                        data: datos,
-                        url: "../procesos/articulos/agregaArticulos.php",
-                        success: function(r) {
-                            if (r == 1) {
-                                alertify.success("¡Categoría agregada con exito!");
-                            } else {
-                                alertify.error("¡No fue posible agregar categoría!");
+                        url: "../procesos/articulos/insertaArticulos.php",
+                        type: "post",
+                        dataType: "html",
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
 
+                        success: function(r) {
+
+                            alert(r);
+
+                            if (r == 1) {
+                                $('#frm')[0].reset();
+                                $('#tablaArticulosLoad').load("articulos/tablaArticulos.php"); 
+                                alertify.success("Agregado con exito :D");
+                            } else {
+                                alertify.error("Fallo al subir el archivo :(");
                             }
                         }
                     });
+
                 });
-
-
-
-
-
-
-
-
             })
         </script>
 

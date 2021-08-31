@@ -9,11 +9,11 @@
     <tr>
         <td></td>
         <td>
-            <span class="btn-warning btn-sm">
+            <span class="btn-warning btn-xs">
                 <span><i class="fa fa-pencil"></i></span>
             </span>
         </td>
-        <td><span class="btn-danger btn-sm">
+        <td><span class="btn-danger btn-xs">
             <span><i class="far far fa-trash-alt"></span>
         </span>
         </td>
