@@ -90,7 +90,7 @@ if (isset($_SESSION['usuario'])) {
                                         <label for="" class="form-label">Nombre</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="descripsion" id="descripsion" class="from-control input-sm ">
+                                        <input type="text" id="descripcion" name="descripcion" class="from-control input-sm ">
                                         <label for="" class="form-label">Descripción</label>
                                     </div>
                                     <div class="mb-3">
@@ -152,12 +152,12 @@ if (isset($_SESSION['usuario'])) {
 
                 $('#btnAgregarArticulo').click(function() {
 
-                    /*vacios = validarFormVacio('frmArticulos ');
+                    vacios = validarFormVacio('frmArticulos ');
 
                     if (vacios > 0) {
                         alertify.alert("¡Debes llenar todos los campos!");
                         return false;
-                    }*/
+                    }
 
                     var formData = new FormData(document.getElementById("frmArticulos"));
 
@@ -172,14 +172,14 @@ if (isset($_SESSION['usuario'])) {
 
                         success: function(r) {
 
-                            alert(r);
+                           alert(r);
 
                             if (r == 1) {
-                                $('#frm')[0].reset();
+                                $('#frmArticulos')[0].reset();
                                 $('#tablaArticulosLoad').load("articulos/tablaArticulos.php"); 
-                                alertify.success("Agregado con exito :D");
+                                alertify.success("¡Agregado con exito!");
                             } else {
-                                alertify.error("Fallo al subir el archivo :(");
+                                alertify.error("¡Fallo al subir el archivo!");
                             }
                         }
                     });
