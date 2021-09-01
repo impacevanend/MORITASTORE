@@ -1,6 +1,9 @@
 <?php
 
+require_once "../../clases/Conexion.php";
+require_once "../../clases/Articulos.php";
 
+    $obj = new Articulos();
     
 
     
@@ -18,7 +21,14 @@
         $carpeta = '../../archivos/';
         $rutaFinal = $carpeta.$nombreImg;
 
+        $datosImg=array(
+            $_POST['categoriaSelect'],
+            $nombreImg,
+            $rutaFinal
+                        );
+
         if(move_uploaded_file($rutaAlmacenamiento, $rutaFinal)){
-            echo "¡Se guardo con éxito!";
+            
+           echo $idimagen=$obj->agregaImagen($datosImg);
         }
 ?>
