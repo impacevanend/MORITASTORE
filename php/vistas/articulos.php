@@ -172,7 +172,7 @@ if (isset($_SESSION['usuario'])) {
 
                         success: function(r) {
 
-                           alert(r);
+                          
 
                             if (r == 1) {
                                 $('#frmArticulos')[0].reset();
