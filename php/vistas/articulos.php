@@ -53,7 +53,7 @@ if (isset($_SESSION['usuario'])) {
                 <div class="col-12 col-lg-9 border">
                     <!--*menu  Columna derecha-->
                     <div class="row">
-                        <div class="col-12 col-lg-12 p-2 border">
+                        <div class=" col-12 col-lg-12 p-2 border">
                             <!-- *Migas de pan -->
                             <ol class="breadcrumb alert alert-dark">
                                 <li class="breadcrumb-item h5">Articulos</li>

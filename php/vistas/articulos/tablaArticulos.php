@@ -51,7 +51,7 @@ $result = mysqli_query($conexion, $sql);
                     </span>
                 </td>
                 <td>
-                    <span class=" btn-sm">
+                    <span class=" btn-sm" onclick="eliminaArticulo('<?php echo $ver[6] ?>')">
 
                         <button class="btn btn-success me-md-1" type="button"><i class="far fa-trash-alt"></i></button>
 
