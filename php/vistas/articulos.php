@@ -229,6 +229,28 @@ if (isset($_SESSION['usuario'])) {
 		}
 	</script> 
 
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnActualizaarticulo').click(function(){
+
+				datos=$('#frmArticulosU').serialize();
+				$.ajax({
+					type:"POST", 
+					data:datos,
+					url:"../procesos/articulos/actualizaArticulos.php",
+					success:function(r){
+						if(r==1){
+							$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
+							alertify.success("¡Actualizado con éxito!");
+						}else{
+							alertify.error("¡Error al actualizar!");
+						}
+					}
+				});
+			});
+		});
+	</script>
+
         <script>
             $(document).ready(function() {
 
