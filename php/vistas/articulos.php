@@ -72,7 +72,7 @@ if (isset($_SESSION['usuario'])) {
                     </div>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-12 col-sm-4">
 
                                 <form id="frmArticulos" enctype="multipart/form-data">
                                     <div class="mb-3">
@@ -110,7 +110,7 @@ if (isset($_SESSION['usuario'])) {
                                     <button class="btn btn-dark me-md-1" type="button" id="btnAgregarArticulo"><i class="fa fa-plus"></i> Agregar</button>
                                 </form>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-12 col-sm-8">
                                 <div class="table 10" id="tablaArticulosLoad">
 
                                 </div>

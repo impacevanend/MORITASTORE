@@ -24,12 +24,12 @@
          </ul>
       </li>
       <li class="mb-2">
-         <a href="#" class="serv-cam"><i class="far fa-user me-2"></i>Clientes
+         <a href="#" class="serv-cam"><i class="far fa-user me-2"></i>Usuarios
             <span class="fas fa-caret-down second"></span>
          </a>
          <ul class="serv-cam">
             <li><a href="clients/clientes.html">Clientes</a></li>
-            <li><a href="clients/clientes.html">Grupo de clientes</a></li>
+            <li><a href="usuarios.php">Administrar Usuarios</a></li>
             <li><a href="clients/aprobacionesClientes.html">Clientes aprobados</a></li>
          </ul>
       </li>
