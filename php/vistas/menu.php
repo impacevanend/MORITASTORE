@@ -3,7 +3,7 @@
       Menu
    </div>
    <ul>
-      <li class=""><a href="#">Contenido:</a></li>
+      <li class=""><a href="#">Contenido: <?php echo $_SESSION['usuario'];?></a></li>
       <li>
          <a href="#" class="feat-btn"><i class="fas fa-tags me-2"></i>Catalogo
             <span class="fas fa-caret-down first"></span>
@@ -29,11 +29,17 @@
          </a>
          <ul class="serv-cam">
             <li><a href="clients/clientes.html">Clientes</a></li>
-            <li><a href="usuarios.php">Administrar Usuarios</a></li>
+            
+
+           <?php if($_SESSION['usuario']== "admin"): ?>
+           <li><a href="usuarios.php">Administrar Usuarios</a></li>
+           <?php endif; ?>
+
+
             <li><a href="clients/aprobacionesClientes.html">Clientes aprobados</a></li>
          </ul>
       </li>
-      <li>
+      <li> 
          <a href="#" class="serv-cam2"><i class="far fa-chart-bar me-2"></i>Informes
             <span class="fas fa-caret-down second"></span>
          </a>
