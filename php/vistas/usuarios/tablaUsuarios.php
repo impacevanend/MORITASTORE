@@ -30,7 +30,7 @@
 		<td><?php echo $ver[3]; ?></td>
         <td>
         <span class="btn btn-warning btn-xs" >
-				<span class="glyphicon glyphicon-pencil"></span>
+				<span data-toggle="modal" data-target="#actualizaUsuarioModal" class="glyphicon glyphicon-pencil" onclick="agregaDatosUsuario('<?php echo $ver[0]; ?>')"></span>
 			</span>
         </td>
         <td>
