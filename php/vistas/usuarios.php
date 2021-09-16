@@ -171,9 +171,9 @@ if (isset($_SESSION['usuario']) and $_SESSION['usuario'] == 'admin') {
                     success: function(r) {
                         if (r == 1) {
                             $('#tablaUsuariosLoad').load('usuarios/tablaUsuarios.php');
-                            alertify.success("Eliminado con exito!!");
+                            alertify.success("¡Usuario eliminado con exito!");
                         } else {
-                            alertify.error("No se pudo eliminar :(");
+                            alertify.error("¡No se pudo eliminar!");
                         }
                     }
                 });
