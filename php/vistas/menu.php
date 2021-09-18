@@ -18,7 +18,7 @@
             <span class="fas fa-caret-down second"></span>
          </a>
          <ul class="serv-show">
-            <li><a href="ventas/ordenes.html">Ordenes</a></li>
+            <li><a href="ventas.php">Venta de Productos</a></li>
             <li><a href="ventas/perfilRecurrente.html">Perfil recurrente</a></li>
             <li><a href="ventas/devoluciones.htm">Devoluciones</a></li>
          </ul>
@@ -36,7 +36,7 @@
            <?php endif; ?>
 
 
-            <li><a href="clients/aprobacionesClientes.html">Clientes aprobados</a></li>
+         
          </ul>
       </li>
       <li> 

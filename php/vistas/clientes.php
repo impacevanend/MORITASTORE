@@ -187,9 +187,9 @@ if (isset($_SESSION['usuario'])) {
 					success:function(r){
 						if(r==1){
 							$('#tablaClientesLoad').load("clientes/tablaClientes.php");
-							alertify.success("Eliminado con exito!!");
+							alertify.success("¡Cliente eliminado con exito!");
 						}else{
-							alertify.error("No se pudo eliminar :(");
+							alertify.error("No se pudo eliminar cliente");
 						}
 					}
 				});
