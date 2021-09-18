@@ -5,7 +5,7 @@
 		public function agregaCliente($datos){
 			$c= new conectar();
 			$conexion=$c->conexion();
- 
+   
             // Identificar quién cargo los datos del cliente
 			$idusuario=$_SESSION['iduser'];
 
