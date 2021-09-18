@@ -7,7 +7,7 @@
 			<table class="table table-hover table-condensed table-bordered" style="text-align: center;">
 				<caption><label>Ventas :)</label></caption>
 				<tr>
-					<td>Folio</td>
+					<td>Libro</td>
 					<td>Fecha</td>
 					<td>Cliente</td>
 					<td>Total de compra</td>
@@ -26,12 +26,12 @@
 					</td>
 					<td>
 						<a href="../procesos/ventas/crearTicketPdf.php?idventa=<?php echo $ver[0] ?>" class="btn btn-danger btn-sm">
-							Ticket <span class="glyphicon glyphicon-list-alt"></span>
+							Ticket <span class="fas fa-ticket-alt"></span>
 						</a>
 					</td>
 					<td>
 						<a href="../procesos/ventas/crearReportePdf.php?idventa=<?php echo $ver[0] ?>" class="btn btn-danger btn-sm">
-							Reporte <span class="glyphicon glyphicon-file"></span>
+							Reporte <span class="fas fa-clipboard-list"></span>
 						</a>	
 					</td>
 				</tr>

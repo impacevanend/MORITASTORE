@@ -48,7 +48,7 @@ $conexion=$c->conexion();
 			<span class="btn btn-danger" id="btnVaciarVentas">Vaciar ventas</span>
 		</form>
 	</div>
-	<div class="col-sm-3">
+	<div class="col-sm-4">
 		<div id="imgProducto"></div>
 	</div>
 	<div class="col-sm-4">
@@ -60,7 +60,7 @@ $conexion=$c->conexion();
 	$(document).ready(function(){
 
 		$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
-
+        //Para mostrar información del select cuándo exista un cambio. 
 		$('#productoVenta').change(function(){
 			$.ajax({
 				type:"POST",
