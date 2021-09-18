@@ -209,7 +209,7 @@ if (isset($_SESSION['usuario'])) {
 				vacios=validarFormVacio('frmClientes');
 
 				if(vacios > 0){
-					alertify.alert("Debes llenar todos los campos!!");
+					alertify.alert("¡Debes llenar todos los campos!");
 					return false;
 				}
 
@@ -224,9 +224,9 @@ if (isset($_SESSION['usuario'])) {
 						if(r==1){
 							$('#frmClientes')[0].reset();
 							$('#tablaClientesLoad').load("clientes/tablaClientes.php");
-							alertify.success("Cliente agregado con exito :D");
+							alertify.success("¡Cliente agregado con exito!");
 						}else{
-							alertify.error("No se pudo agregar cliente");
+							alertify.error("¡No se pudo agregar cliente!");
 						}
 					}
 				});
@@ -248,9 +248,9 @@ if (isset($_SESSION['usuario'])) {
 						if(r==1){
 							$('#frmClientes')[0].reset();
 							$('#tablaClientesLoad').load("clientes/tablaClientes.php");
-							alertify.success("Cliente actualizado con exito :D");
+							alertify.success("¡Cliente actualizado con exito!");
 						}else{
-							alertify.error("No se pudo actualizar cliente");
+							alertify.error("¡No se pudo actualizar cliente!");
 						}
 					}
 				});
