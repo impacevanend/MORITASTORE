@@ -28,7 +28,7 @@
             <span class="fas fa-caret-down second"></span>
          </a>
          <ul class="serv-cam">
-            <li><a href="clients/clientes.html">Clientes</a></li>
+            <li><a href="clientes.php">Clientes</a></li>
             
 
            <?php if($_SESSION['usuario']== "admin"): ?>
