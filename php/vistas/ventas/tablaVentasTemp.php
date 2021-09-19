@@ -8,8 +8,8 @@
  <h4><strong><div id="nombreclienteVenta"></div></strong></h4>
  <table class="table table-bordered table-hover table-condensed" style="text-align: center;">
  	<caption>
- 		<span class="btn btn-success" onclick="crearVenta()"> Generar venta
- 			<span class="glyphicon glyphicon-usd"></span>
+ 		<span class="btn btn-success btn-md" onclick="crearVenta()"> 
+ 			<span class="fas fa-dollar-sign"></span> Hacer venta 
  		</span>
  	</caption>
  	<tr>
@@ -24,6 +24,8 @@
  	$cliente=""; //en esta se guarda el nombre del cliente
  		if(isset($_SESSION['tablaComprasTemp'])):
  			$i=0;
+
+			 //@Quita los warning si está vacio.
  			foreach (@$_SESSION['tablaComprasTemp'] as $key) {
 
  				$d=explode("||", @$key);
@@ -36,7 +38,7 @@
  		<td><?php echo 1; ?></td>
  		<td>
  			<span class="btn btn-danger btn-xs" onclick="quitarP('<?php echo $i; ?>')">
- 				<span class="glyphicon glyphicon-remove"></span>
+ 				<span class="fas fa-trash-alt"></span>
  			</span>
  		</td>
  	</tr>
