@@ -44,8 +44,12 @@
  	</tr>
 
  <?php 
+		//Acumulador calculo de precio 
  		$total=$total + $d[3];
+
+		//indice
  		$i++;
+
  		$cliente=$d[4];
  	}
  	endif; 
