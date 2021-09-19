@@ -59,6 +59,7 @@ $conexion=$c->conexion();
 <script type="text/javascript">
 	$(document).ready(function(){
 
+        //Carga de la tabla temporal
 		$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
         //Para mostrar información del select cuándo exista un cambio. 
 		$('#productoVenta').change(function(){
